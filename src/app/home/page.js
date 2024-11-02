@@ -84,6 +84,7 @@ function Home() {
             alt="man3"
           />
         </div>
+        
       </div>
 
       {/* Treatment Options */}
