@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+}
+
+@layer utilities {
+  h1 {
+    color: blue;
+  }
+  #ABCD {
+    font-size: small;
+    color: aqua;
+  }
+  #q1:hover {
+    background-color: aqua;
+  }
+  #services:drop{
+
+  }
+}
+ #first{animation: changetext;}
+#cooler::after{
+content: '';
+animation: changetext 8s  infinite linear;
+}
+@keyframes changetext{
+    0%{
+        content: 'Got Cooler';
+    }
+    20%{
+        content: 'Got Hope-Giving';
+    }
+    40%{
+        content: 'Got Convenient';
+    }
+    60%{
+        content: 'Got Life-Changeing';
+    }
+    80%{
+        content: 'Got Easier';
+    }
+    100%{
+        content: 'Got Empowering';
+    }
+}
