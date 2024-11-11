@@ -6,7 +6,7 @@ function Stories() {
     <main className="p-10 bg-white">
         
       {/* story 1 */}
-      <div className="flex flex-col space-y-4 py-6 border-8 rounded-lg bg-lime-300 border-lime-800">
+      <div className="flex flex-col space-y-4 py-6 border-8 rounded-lg bg-indigo-300 border-indigo-900">
         <span className="flex justify-center items-center space-x-3 text-center font-bold">
           <p className="text-xl text-gray-800">Title:</p>
           <p className="text-teal-800">

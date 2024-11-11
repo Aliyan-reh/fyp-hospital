@@ -59,3 +59,42 @@ animation: changetext 8s  infinite linear;
         content: 'Got Empowering';
     }
 }
+.dropdown{
+  position: relative;
+}
+.dropdown p{
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown .content{
+  display: none;
+  position: absolute;
+  background-color: rgb(243, 235, 235);
+  min-width: 100px;
+  box-shadow: 2px 2px 5px rgb(47, 50, 39);
+}
+.dropdown:hover .content{
+  display: block;
+}
+
+.dropdown:hover .p{
+  background-color: violet;
+}
+
+.dropdown a:hover{
+  background-color: rgb(210, 230, 230);
+}
+.dropdown-img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  padding: 10px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
