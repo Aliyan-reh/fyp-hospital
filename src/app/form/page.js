@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from 'react';
-import axios from 'axios';
 import { toast  } from 'react-toastify';
-
+import apiClient from '../../axios/apiClient';
 const ContactForm = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [formData, setFormData] = useState({
@@ -79,7 +78,7 @@ const ContactForm = () => {
     }
   
     try {
-      const response = await axios.post('https://fyp-backend-n76b.onrender.com/api/forms/submit', formData);
+      const response = await apiClient.post('/api/forms/submit', formData);
       setFormData({
         firstName: '',
         lastName: '',
