@@ -126,11 +126,6 @@ function Header() {
                 About
               </p>
             </Link>
-            <Link href="/home">
-              <p className="text-black hover:text-teal-900 rounded-md font-extrabold underline">
-                Contact
-              </p>
-            </Link>
             <Link href="/appointment">
               <button className="xl:py-5 md:py-3 xl:w-52 lg:w-44 md:w-36 text-center xl:text-sm md:text-xs rounded-lg font-semibold  text-white bg-teal-600 hover:bg-black hover:text-white">
                 Book an Appointment
