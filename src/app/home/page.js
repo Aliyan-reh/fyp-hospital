@@ -1,8 +1,26 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
+import {useState} from 'react'
+import LoginModal from "../../components/LoginModal";
 function Home() {
+  const [open, setOpen] = useState(true)
+  const handleCheckUser = () => {
+    const user = localStorage.getItem('user');
+
+    if (user) {
+      // toast.success('User is logged in.');
+      console.log('User data:', JSON.parse(user));
+    } else {
+      setOpen(true)
+      // toast.error('No user is logged in.');
+    }
+  };
+
+  const handleCloseModal = () => {
+    setOpen(false); // Close the modal
+  };
   return (
     <main className="font-serif py-4 px-10 space-y-5 bg-white">
       {/* first part */}
@@ -136,7 +154,12 @@ function Home() {
                 </p>
               </span>
               <span className="flex justify-center space-x-3 cursor-pointer hover:font-extrabold hover:underline">
-                <p>Learn More</p>
+              <button
+      onClick={handleCheckUser}
+      className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 text-lg"
+    >
+      Learn More
+    </button>
                 <Image
                   className="lg:w-25 lg:h-15"
                   src={"/image/arr.svg"}
@@ -172,7 +195,12 @@ function Home() {
                 </p>
               </span>
               <span className="flex justify-center space-x-3 cursor-pointer hover:font-extrabold hover:underline">
-                <p>Learn More</p>
+              <button
+      onClick={handleCheckUser}
+      className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 text-lg"
+    >
+      Learn More
+    </button>
                 <Image
                   className="lg:w-25 lg:h-15"
                   src={"/image/arr.svg"}
@@ -208,7 +236,12 @@ function Home() {
                 </p>
               </span>
               <span className="flex justify-center space-x-3 cursor-pointer hover:font-extrabold hover:underline">
-                <p>Learn More</p>
+              <button
+      onClick={handleCheckUser}
+      className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 text-lg"
+    >
+      Learn More
+    </button>
                 <Image
                   className="lg:w-25 lg:h-15"
                   src={"/image/arr.svg"}
@@ -246,7 +279,12 @@ function Home() {
                 </p>
               </span>
               <span className="flex justify-center space-x-3 cursor-pointer hover:font-extrabold hover:underline">
-                <p>Learn More</p>
+              <button
+      onClick={handleCheckUser}
+      className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 text-lg"
+    >
+      Learn More
+    </button>
                 <Image
                   className="lg:w-25 lg:h-15"
                   src={"/image/arr.svg"}
@@ -281,7 +319,12 @@ function Home() {
                 </p>
               </span>
               <span className="flex justify-center space-x-3 cursor-pointer hover:font-extrabold hover:underline">
-                <p>Learn More</p>
+              <button
+      onClick={handleCheckUser}
+      className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 text-lg"
+    >
+      Learn More
+    </button>
                 <Image
                   className="lg:w-25 lg:h-15"
                   src={"/image/arr.svg"}
@@ -317,7 +360,12 @@ function Home() {
                 </p>
               </span>
               <span className="flex justify-center space-x-3 cursor-pointer hover:font-extrabold hover:underline">
-                <p>Learn More</p>
+              <button
+      onClick={handleCheckUser}
+      className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 text-lg"
+    >
+      Learn More
+    </button>
                 <Image
                   className="lg:w-25 lg:h-15"
                   src={"/image/arr.svg"}
@@ -553,6 +601,7 @@ function Home() {
         </span>
       </div>
 
+      {open && <LoginModal handleCloseModal={handleCloseModal} open={open} />}
     </main>
   );
 }
