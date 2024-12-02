@@ -65,16 +65,18 @@ function Header() {
       </div>
 
       <div className="flex justify-between items-center 2xl:px-12 xl:px-20 md:px-10 md:h-2/3 2xl:h-[75%] border-b bg-white">
-        <div className="2xl:h- 2xl:w-60">
+        <div className="">
+          <div className="flex items-center md:h-5 md:w-48">
           <Link href="/home">
             {" "}
             <Image
-              src={"/image/apex.png"}
-              width={240}
-              height={240}
+              src={"/image/image37.png"}
+              width={200}
+              height={200}
               alt=""
             ></Image>
           </Link>
+        </div>
         </div>
         <div className="flex items-center h-full md:w-full 2xl:w-[55%] lg:w-[65%]">
           <div className="xl:w-64 md:w-24 lg:w-60 h-full"></div>
