@@ -55,11 +55,35 @@ const ContactForm = () => {
     const currentKey = questions[slideIndex].key;
     const error = validateField(currentKey, formData[currentKey]);
     if (!error) {
-      setSlideIndex(slideIndex + 1);
+      if (slideIndex < questions.length - 1) {
+        setSlideIndex(slideIndex + 1); // Move to the next slide
+      } else {
+        handleFinalSubmit(); // Trigger the final form submission
+      }
     } else {
       setErrors({ ...errors, [currentKey]: error });
     }
   };
+  
+  const handleFinalSubmit = async () => {
+    try {
+      const response = await apiClient.post('/api/forms/submit', formData);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        location: '',
+        message: '',
+      });
+      toast.success('Form submitted successfully');
+      setSlideIndex(0); // Reset to the first slide
+      console.log('Form submitted successfully:', response.data);
+    } catch (error) {
+      console.error('Error submitting form:', error.response?.data || error.message);
+    }
+  };
+  
 
   const handlePrev = () => {
     if (slideIndex > 0) {
@@ -154,6 +178,7 @@ const ContactForm = () => {
         <div className="flex items-center">
           <button
             type="submit"
+            onClick={handleNext}
             className="bg-[#73cfcf] text-white py-2 px-4 rounded font-medium"
           >
            {slideIndex === questions.length - 1 ? 'Submit' : 'OK'}
