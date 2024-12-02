@@ -86,47 +86,149 @@ function Header() {
                 </p>
               </Link>
               <div class="content">
-              <div className="p-4 w-[auto] h-[auto]">
-                  <h1 className="text-3xl text-wrap w-56 text-black">General & Family Services</h1>
-                  <h2 className="text-2xl text-wrap text-black">Primary Care </h2>
-                  <h4 className="text-xl text-wrap text-gray-700">
+              <div className="p-4 w-[450px] h-[auto]">
+                  <h1 className="text-center text-2xl text-black">General & Family Services</h1>
+                  <div className="">
+                  <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">Primary Care </p>
+                  <p className="text-base text-gray-700">
                     Routine check-ups and physicals -Chronic disease management
                     (Diabetes, Hypertension, Asthma) - Acute illness care (Cold,
                     Flu, Infections) - Vaccinations and immunizations
-                  </h4>
-                  <h2 className="text-2xl text-wrap text-black"> Family Medicine </h2>
-                  <p className="text-xl text-wrap text-gray-700">
+                  </p>
+                  </div>
+                  <div>
+                  <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900"> Family Medicine </p>
+                  <p className="text-base text-gray-700">
                   Comprehensive care for all ages - Preventive care and
                     health screenings - Chronic disease management - Mental
                     health services
                   </p>
-                  <h2 className="text-2xltext-wrap text-black">Urgent Care</h2>
-                  <p className="text-xl text-wrap text-gray-700">
+                  </div>
+                  <div>
+                  <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">Urgent Care</p>
+                  <p className="text-base text-gray-700">
                     Walk-in care for acute illnesses and injuries - Evening and
                     weekend hours - On-site lab and imaging services
                   </p>
-                </div>
-      <div>
-      
-      </div>
+                  </div>
+               </div>
+     
               </div>
             </div>
-            <Link href="/home">
-              <p className="text-black hover:text-teal-900 rounded-md font-extrabold underline">
-                Location
-              </p>
-            </Link>
-            <Link href="/home">
-              <p className="text-black hover:text-teal-900 rounded-md font-extrabold underline">
-                Insurance
-              </p>
-            </Link>
-            <Link href="/home">
-              <p className="text-black hover:text-teal-900 rounded-md font-extrabold underline">
-                About
-              </p>
-            </Link>
-            <Link href="/appointment">
+
+            <div className="dropdown1">
+              <Link href="/home">
+                <p className="text-black hover:text-teal-900 rounded-md font-extrabold underline">
+                  Location
+                </p>
+              </Link>
+              <div class="content1">
+              <div className="p-4 w-[450px] h-[auto]">
+                  <h1 className="text-center text-2xl text-black">General & Family Services</h1>
+                  <div className="">
+                  <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">Primary Care </p>
+                  <p className="text-base text-gray-700">
+                    Routine check-ups and physicals -Chronic disease management
+                    (Diabetes, Hypertension, Asthma) - Acute illness care (Cold,
+                    Flu, Infections) - Vaccinations and immunizations
+                  </p>
+                  </div>
+                  <div>
+                  <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900"> Family Medicine </p>
+                  <p className="text-base text-gray-700">
+                  Comprehensive care for all ages - Preventive care and
+                    health screenings - Chronic disease management - Mental
+                    health services
+                  </p>
+                  </div>
+                  <div>
+                  <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">Urgent Care</p>
+                  <p className="text-base text-gray-700">
+                    Walk-in care for acute illnesses and injuries - Evening and
+                    weekend hours - On-site lab and imaging services
+                  </p>
+                  </div>
+               </div>
+     
+              </div>
+            </div>
+
+            <div className="dropdown2">
+              <Link href="/home">
+                <p className="text-black hover:text-teal-900 rounded-md font-extrabold underline">
+                  Insurances
+                </p>
+              </Link>
+              <div class="content2">
+              <div className="p-4 w-[450px] h-[auto]">
+                  <h1 className="text-center text-2xl text-black">General & Family Services</h1>
+                  <div className="">
+                  <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">Primary Care </p>
+                  <p className="text-base text-gray-700">
+                    Routine check-ups and physicals -Chronic disease management
+                    (Diabetes, Hypertension, Asthma) - Acute illness care (Cold,
+                    Flu, Infections) - Vaccinations and immunizations
+                  </p>
+                  </div>
+                  <div>
+                  <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900"> Family Medicine </p>
+                  <p className="text-base text-gray-700">
+                  Comprehensive care for all ages - Preventive care and
+                    health screenings - Chronic disease management - Mental
+                    health services
+                  </p>
+                  </div>
+                  <div>
+                  <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">Urgent Care</p>
+                  <p className="text-base text-gray-700">
+                    Walk-in care for acute illnesses and injuries - Evening and
+                    weekend hours - On-site lab and imaging services
+                  </p>
+                  </div>
+               </div>
+     
+              </div>
+            </div>
+
+            <div className="dropdown3">
+              <Link href="/home">
+                <p className="text-black hover:text-teal-900 rounded-md font-extrabold underline">
+                  About
+                </p>
+              </Link>
+              <div class="content3">
+              <div className="p-4 w-[450px] h-[auto]">
+                  <h1 className="text-center text-2xl text-black">General & Family Services</h1>
+                  <div className="">
+                  <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">Primary Care </p>
+                  <p className="text-base text-gray-700">
+                    Routine check-ups and physicals -Chronic disease management
+                    (Diabetes, Hypertension, Asthma) - Acute illness care (Cold,
+                    Flu, Infections) - Vaccinations and immunizations
+                  </p>
+                  </div>
+                  <div>
+                  <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900"> Family Medicine </p>
+                  <p className="text-base text-gray-700">
+                  Comprehensive care for all ages - Preventive care and
+                    health screenings - Chronic disease management - Mental
+                    health services
+                  </p>
+                  </div>
+                  <div>
+                  <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">Urgent Care</p>
+                  <p className="text-base text-gray-700">
+                    Walk-in care for acute illnesses and injuries - Evening and
+                    weekend hours - On-site lab and imaging services
+                  </p>
+                  </div>
+               </div>
+     
+              </div>
+            </div>
+           
+
+            <Link href="/form">
               <button className="xl:py-5 md:py-3 xl:w-52 lg:w-44 md:w-36 text-center xl:text-sm md:text-xs rounded-lg font-semibold  text-white bg-teal-600 hover:bg-black hover:text-white">
                 Book an Appointment
               </button>

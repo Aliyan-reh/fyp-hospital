@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { toast  } from 'react-toastify';
 import apiClient from '../../axios/apiClient';
+import Appointment from '../appointment/page';
 const ContactForm = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [formData, setFormData] = useState({
@@ -98,7 +99,7 @@ const ContactForm = () => {
 
   return (
     <>
-
+<Appointment />
 <div className="bg-[#fdf4ef] p-8 max-w-lg mx-auto rounded-lg text-center">
       <div className="relative w-full h-2 bg-gray-200 rounded mb-4">
         <div

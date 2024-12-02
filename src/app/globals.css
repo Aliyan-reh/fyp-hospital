@@ -63,7 +63,7 @@ animation: changetext 8s  infinite linear;
   position: relative;
 }
 .dropdown p{
-  color: black;
+  
   padding: 10px 15px;
   border: none;
   cursor: pointer;
@@ -72,17 +72,16 @@ animation: changetext 8s  infinite linear;
 .dropdown .content{
   display: none;
   position: absolute;
-  background-color: rgb(243, 235, 235);
+  background-color: rgb(240, 199, 166);
   min-width: 100px;
   box-shadow: 2px 2px 5px rgb(47, 50, 39);
+  border-radius: 5%;
+  top: 60px;
 }
 .dropdown:hover .content{
   display: block;
 }
 
-.dropdown:hover .p{
-  background-color: violet;
-}
 
 .dropdown a:hover{
   background-color: rgb(210, 230, 230);
@@ -98,3 +97,72 @@ animation: changetext 8s  infinite linear;
   background-color: rgba(255, 255, 255, 0.7);
   text-align: center;
 }
+.dropdown1{
+  position: relative;
+}
+.dropdown1 p{
+  
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown1 .content1{
+  display: none;
+  position: absolute;
+  background-color: rgb(240, 199, 166);
+  min-width: 100px;
+  box-shadow: 2px 2px 5px rgb(47, 50, 39);
+  border-radius: 5%;
+  top: 60px;
+}
+.dropdown1:hover .content1{
+  display: block;}
+  
+  
+  .dropdown2{
+    position: relative;
+  }
+  .dropdown2 p{
+    
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown2 .content2{
+    display: none;
+    position: absolute;
+    background-color: rgb(240, 199, 166);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px rgb(47, 50, 39);
+    border-radius: 5%;
+    top: 60px;
+  }
+  .dropdown2:hover .content2{
+    display: block;}
+
+    .dropdown3{
+      position: relative;
+    }
+    .dropdown3 p{
+      
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropdown3 .content3{
+      display: none;
+      position: absolute;
+      background-color: rgb(240, 199, 166);
+      box-shadow: 2px 2px 5px rgb(47, 50, 39);
+      border-radius: 5%;
+      top: 60px;
+      right: 2px;
+    }
+    .dropdown3:hover .content3{
+      display: block;}
+      
+    
+    

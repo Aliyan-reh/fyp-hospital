@@ -128,7 +128,7 @@ function Home() {
           </div>
         </div>
         {/* box */}
-        <div className="flex xl:flex-row lg:flex-col lg:items-center lg:justify-center xl:justify-between">
+        <div className="flex xl:flex-row md:flex-col lg:items-center lg:justify-center xl:justify-between">
           {/* box1 */}
           <div className="p-5">
             <div className="flex flex-col justify-between gap-6 items-center lg:p-4 border-4 lg:w-[350px] text-gray-800 border-orange-200">
@@ -140,7 +140,7 @@ function Home() {
                   height={150}
                   alt=""
                 ></Image>
-              </span>
+              </span>  
               <span className="font-bold cursor-pointer hover:underline hover:text-teal-800">
                 <h1>Child Specialist</h1>
               </span>
@@ -254,7 +254,7 @@ function Home() {
           </div>
         </div>
         {/* box part 2 */}
-        <div className="flex xl:flex-row lg:flex-col lg:items-center lg:justify-center xl:justify-between">
+        <div className="flex xl:flex-row md:flex-col lg:items-center lg:justify-center xl:justify-between">
           {/* box 4 */}
           <div className="p-5">
             <div className="flex flex-col gap-4 items-center lg:p-4 border-4 lg:w-[350px] text-gray-800 border-orange-200">
