@@ -72,7 +72,7 @@ animation: changetext 8s  infinite linear;
 .dropdown .content{
   display: none;
   position: absolute;
-  background-color: rgb(240, 199, 166);
+  background-color: rgb(255, 253, 252);
   min-width: 100px;
   box-shadow: 2px 2px 5px rgb(47, 50, 39);
   border-radius: 5%;
@@ -110,7 +110,7 @@ animation: changetext 8s  infinite linear;
 .dropdown1 .content1{
   display: none;
   position: absolute;
-  background-color: rgb(240, 199, 166);
+  background-color: rgb(255, 253, 252);
   min-width: 100px;
   box-shadow: 2px 2px 5px rgb(47, 50, 39);
   border-radius: 5%;
@@ -133,11 +133,12 @@ animation: changetext 8s  infinite linear;
   .dropdown2 .content2{
     display: none;
     position: absolute;
-    background-color: rgb(240, 199, 166);
+    background-color: rgb(255, 253, 252);
     min-width: 100px;
     box-shadow: 2px 2px 5px rgb(47, 50, 39);
     border-radius: 5%;
     top: 60px;
+      right: 12px;
   }
   .dropdown2:hover .content2{
     display: block;}
@@ -155,7 +156,7 @@ animation: changetext 8s  infinite linear;
     .dropdown3 .content3{
       display: none;
       position: absolute;
-      background-color: rgb(240, 199, 166);
+      background-color: rgb(255, 253, 252);
       box-shadow: 2px 2px 5px rgb(47, 50, 39);
       border-radius: 5%;
       top: 60px;
@@ -163,6 +164,8 @@ animation: changetext 8s  infinite linear;
     }
     .dropdown3:hover .content3{
       display: block;}
+
+
       
     
     

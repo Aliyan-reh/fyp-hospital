@@ -7,10 +7,10 @@ function Doctor() {
         <div className="flex flex-col gap-4">
 
         {/* 1st */}
-      <div className="lg:flex sm:flex-col lg:flex-row lg:justify-between sm:justify-evenly items-center p-10 bg-white">
+      <div className="lg:flex sm:flex-col lg:flex-row lg:justify-between sm:justify-evenly items-center lg:gap-x-4 p-10 bg-white">
         <div className="sm:flex sm:justify-center">
           <Image
-            className="w-[300px] h-[200px]"
+            className="md:w-[300px] md:h-[200px] 2xl:w-[400px] 2xl:h-[300px]"
             src={"/image/image 34.jpg"}
             width={300}
             height={200}
@@ -39,16 +39,16 @@ function Doctor() {
             </span>
           </div></span>
           <div className="flex justify-center items-center p-3">
-            <button className="2xl:w-[500px] 2xl:h-[80px] lg:w-72 lg:h-12 sm:w-64 sm:h-10 2xl:p-5 lg:p-3 2xl:text-3xl lg:text-lg sm:text-md text-center cursor-pointer hover:bg-black bg-teal-400 hover:text-white">Book Appointment Rs.5000</button>
+            <button className="2xl:w-[500px] 2xl:h-[80px] lg:w-60 lg:h-12 sm:w-64 sm:h-10 2xl:p-5 lg:p-3 2xl:text-3xl lg:text-base sm:text-md text-center cursor-pointer hover:bg-black bg-teal-400 hover:text-white">Book Appointment Rs.5000</button>
           </div>
         
       </div>
 
       {/* 2nd */}
-      <div className="lg:flex sm:flex-col lg:flex-row lg:justify-between sm:justify-evenly items-center p-10 bg-white">
+      <div className="lg:flex sm:flex-col lg:flex-row lg:justify-between sm:justify-evenly items-center lg:gap-x-4 p-10 bg-white">
         <div className="sm:flex sm:justify-center">
         <Image
-            className="w-[300px] h-[200px]"
+            className="md:w-[300px] md:h-[200px] 2xl:w-[400px] 2xl:h-[300px]"
             src={"/image/image 31.jpg"}
             width={300}
             height={200}
@@ -76,16 +76,16 @@ function Doctor() {
             </span>
           </div></span>
           <div className="flex justify-center items-center p-3">
-            <button className="2xl:w-[500px] 2xl:h-[80px] lg:w-72 lg:h-12 sm:w-64 sm:h-10 2xl:p-5 lg:p-3 2xl:text-3xl lg:text-lg sm:text-md text-center cursor-pointer hover:bg-black bg-teal-400 hover:text-white">Book Appointment Rs.5000</button>
+           <button className="2xl:w-[500px] 2xl:h-[80px] lg:w-60 lg:h-12 sm:w-64 sm:h-10 2xl:p-5 lg:p-3 2xl:text-3xl lg:text-base sm:text-md text-center cursor-pointer hover:bg-black bg-teal-400 hover:text-white">Book Appointment Rs.5000</button>
           </div>
         
       </div>
 
       {/* 3rd */}
-      <div className="lg:flex sm:flex-col lg:flex-row lg:justify-between sm:justify-evenly items-center p-10 bg-white">
+      <div className="lg:flex sm:flex-col lg:flex-row lg:justify-between sm:justify-evenly items-center lg:gap-x-4 p-10 bg-white">
         <div className="sm:flex sm:justify-center">
           <Image
-            className="w-[300px] h-[200px]"
+            className="md:w-[300px] md:h-[200px] 2xl:w-[400px] 2xl:h-[300px]"
             src={"/image/image 33.jpg"}
             width={200}
             height={300}
@@ -113,16 +113,16 @@ function Doctor() {
             </span>
           </div></span>
           <div className="flex justify-center items-center p-3">
-            <button className="2xl:w-[500px] 2xl:h-[80px] lg:w-72 lg:h-12 sm:w-64 sm:h-10 2xl:p-5 lg:p-3 2xl:text-3xl lg:text-lg sm:text-md text-center cursor-pointer hover:bg-black bg-teal-400 hover:text-white">Book Appointment Rs.5000</button>
+            <button className="2xl:w-[500px] 2xl:h-[80px] lg:w-60 lg:h-12 sm:w-64 sm:h-10 2xl:p-5 lg:p-3 2xl:text-3xl lg:text-base sm:text-md text-center cursor-pointer hover:bg-black bg-teal-400 hover:text-white">Book Appointment Rs.5000</button>
           </div>
         
       </div>
 
       {/* 4th */}
-      <div className="lg:flex sm:flex-col lg:flex-row lg:justify-between sm:justify-evenly items-center p-10 bg-white">
+      <div className="lg:flex sm:flex-col lg:flex-row lg:justify-between sm:justify-evenly items-center lg:gap-x-4 p-10 bg-white">
         <div className="sm:flex sm:justify-center">
           <Image
-           className="w-[300px] h-[200px]"
+           className="md:w-[300px] md:h-[200px] 2xl:w-[400px] 2xl:h-[300px]"
            src={"/image/image 35.jpg"}
            width={300}
            height={200}
@@ -150,16 +150,16 @@ function Doctor() {
             </span>
           </div></span>
           <div className="flex justify-center items-center p-3">
-            <button className="2xl:w-[500px] 2xl:h-[80px] lg:w-72 lg:h-12 sm:w-64 sm:h-10 2xl:p-5 lg:p-3 2xl:text-3xl lg:text-lg sm:text-md text-center cursor-pointer hover:bg-black bg-teal-400 hover:text-white">Book Appointment Rs.5000</button>
+            <button className="2xl:w-[500px] 2xl:h-[80px] lg:w-60 lg:h-12 sm:w-64 sm:h-10 2xl:p-5 lg:p-3 2xl:text-3xl lg:text-base sm:text-md text-center cursor-pointer hover:bg-black bg-teal-400 hover:text-white">Book Appointment Rs.5000</button>
           </div>
         
       </div>
 
       {/* 5th */}
-      <div className="lg:flex sm:flex-col lg:flex-row lg:justify-between sm:justify-evenly items-center p-10 bg-white">
+      <div className="lg:flex sm:flex-col lg:flex-row lg:justify-between sm:justify-evenly items-center lg:gap-x-4 p-10 bg-white">
         <div className="sm:flex sm:justify-center">
           <Image
-            className="w-[300px] h-[200px]"
+            className="md:w-[300px] md:h-[200px] 2xl:w-[400px] 2xl:h-[300px]"
             src={"/image/image 32.jpg"}
             width={300}
             height={200}
@@ -187,16 +187,16 @@ function Doctor() {
             </span>
           </div></span>
           <div className="flex justify-center items-center p-3">
-            <button className="2xl:w-[500px] 2xl:h-[80px] lg:w-72 lg:h-12 sm:w-64 sm:h-10 2xl:p-5 lg:p-3 2xl:text-3xl lg:text-lg sm:text-md text-center cursor-pointer hover:bg-black bg-teal-400 hover:text-white">Book Appointment Rs.5000</button>
+            <button className="2xl:w-[500px] 2xl:h-[80px] lg:w-60 lg:h-12 sm:w-64 sm:h-10 2xl:p-5 lg:p-3 2xl:text-3xl lg:text-base sm:text-md text-center cursor-pointer hover:bg-black bg-teal-400 hover:text-white">Book Appointment Rs.5000</button>
           </div>
         
       </div>
 
       {/* 6th */}
-      <div className="lg:flex sm:flex-col lg:flex-row lg:justify-between sm:justify-evenly items-center p-10 bg-white">
+      <div className="lg:flex sm:flex-col lg:flex-row lg:justify-between sm:justify-evenly items-center lg:gap-x-4 p-10 bg-white">
         <div className="sm:flex sm:justify-center">
           <Image
-           className="w-[300px] h-[200px]"
+           className="md:w-[300px] md:h-[200px] 2xl:w-[400px] 2xl:h-[300px]"
            src={"/image/image 36.jpg"}
            width={300}
            height={200}
@@ -224,7 +224,7 @@ function Doctor() {
             </span>
           </div></span>
           <div className="flex justify-center items-center p-3">
-            <button className="2xl:w-[500px] 2xl:h-[80px] lg:w-72 lg:h-12 sm:w-64 sm:h-10 2xl:p-5 lg:p-3 2xl:text-3xl lg:text-lg sm:text-md text-center cursor-pointer hover:bg-black bg-teal-400 hover:text-white">Book Appointment Rs.5000</button>
+            <button className="2xl:w-[500px] 2xl:h-[80px] lg:w-60 lg:h-12 sm:w-64 sm:h-10 2xl:p-5 lg:p-3 2xl:text-3xl lg:text-base sm:text-md text-center cursor-pointer hover:bg-black bg-teal-400 hover:text-white">Book Appointment Rs.5000</button>
           </div>
         
       </div>

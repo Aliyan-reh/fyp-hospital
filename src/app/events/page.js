@@ -38,7 +38,7 @@ function Updates() {
                 Health hub
               </span>
             </p>
-            <span className="2xl:text-2xl xl:text-base lg:text-sm md:text-xs font-normal cursor-pointer hover:font-bold text-gray-800">
+            <span className="2xl:text-2xl xl:text-base lg:text-sm md:text-xs font-normal text-gray-800">
               <p className="xl:w-[600px] lg:w-[500px] md:w-[350px] h-auto">
                 Stay connected with Health Hub's latest updates! Our team is
                 dedicated to keeping you informed about the latest developments,

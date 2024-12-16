@@ -6,7 +6,8 @@ function Stories() {
     <main className="p-10 bg-white">
         
       {/* story 1 */}
-      <div className="flex flex-col space-y-4 py-6 border-8 rounded-lg bg-indigo-300 border-indigo-900">
+      
+      <div className="flex flex-col space-y-4 py-6 border-8 rounded-lg bg-indigo-300 border-indigo-900" id="story1">
         <span className="flex justify-center items-center space-x-3 text-center font-bold">
           <p className="text-xl text-gray-800">Title:</p>
           <p className="text-teal-800">
@@ -40,7 +41,10 @@ function Stories() {
           />
         </span>
       </div>
+
       {/* story 2 */}
+      
+      <div id="story2">
       <div className="py-6">
         <div className="flex flex-col space-y-4 py-6 border-8 rounded-lg bg-red-300 border-red-800">
           <span className="flex justify-center items-center space-x-3 text-center font-bold">
@@ -76,7 +80,11 @@ function Stories() {
           </span>
         </div>
       </div>
+      </div>
+
       {/* story 3 */}
+      
+      <div id="story3">
       <div className="py-6">
         <div className="flex flex-col space-y-4 py-6 border-8 rounded-lg bg-purple-300 border-purple-800">
           <span className="flex justify-center items-center space-x-3 text-center font-bold">
@@ -119,7 +127,10 @@ function Stories() {
           </span>
         </div>
       </div>
+      </div>
       {/* story 4 */}
+      
+      <div id="story4">
       <div className="py-6">
         <div className="flex flex-col space-y-4 py-6 border-8 rounded-lg bg-sky-300 border-sky-800">
           <span className="flex justify-center items-center space-x-3 text-center font-bold">
@@ -156,7 +167,10 @@ function Stories() {
           </span>
         </div>
       </div>
+      </div>
       {/* story 5 */}
+      
+      <div id="story5">
       <div className="py-6">
         <div className="flex flex-col space-y-4 py-6 border-8 rounded-lg bg-orange-400 border-orange-800">
           <span className="flex justify-center items-center space-x-3 text-center font-bold">
@@ -192,8 +206,12 @@ function Stories() {
           </span>
         </div>
       </div>
+      </div>
+    
+
     </main>
   );
 }
+
 
 export default Stories;
