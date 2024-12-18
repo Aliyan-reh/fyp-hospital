@@ -94,39 +94,39 @@ function Header() {
                 </p>
               </Link>
               <div class="content">
-                <div className="p-4 w-[600px] h-[auto]">
-                  <h1 className="text-center text-2xl text-black">
+                <div className="2xl:p-12 lg:p-4 md:p-2 2xl:w-[800px] lg:w-[600px] lg:h-[auto] md:w-[400px] md:h-[auto]">
+                  <h1 className="text-center 2xl:text-5xl lg:text-xl md:text-base text-black">
                     General & Family Services
                   </h1>
                   <div className="">
-                    <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">
+                    <p className="text-center 2xl:text-5xl lg:text-xl md:text-base cursor-pointer text-black hover:text-teal-900">
                       Primary Care{" "}
                     </p>
-                    <p className="text-base text-gray-700">
+                    <p className="2xl:text-2xl lg:text-base md:text-xs text-gray-700">
                       Our hospital’s Primary Care helps with regular health
                       checkups, treating common illnesses or injuries, managing
                       long-term health issues like diabetes.
                     </p>
                   </div>
                   <div>
-                    <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">
+                    <p className="text-center 2xl:text-5xl lg:text-xl md:text-base cursor-pointer text-black hover:text-teal-900">
                       {" "}
                       Family Medicine{" "}
                     </p>
-                    <p className="text-base text-gray-700">
+                    <p className="2xl:text-2xl lg:text-base md:text-xs text-gray-700">
                       Our hospital’s Family Medicine provides care for people of
                       all ages, from children to seniors, focusing on your
-                      entire family’s health. We treat common illnesses.
+                      entire family’s health.
                     </p>
                   </div>
                   <div>
-                    <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">
+                    <p className="text-center 2xl:text-5xl lg:text-xl md:text-base cursor-pointer text-black hover:text-teal-900">
                       Urgent Care
                     </p>
-                    <p className="text-base text-gray-700">
+                    <p className="2xl:text-2xl lg:text-base md:text-xs text-gray-700">
                       Our hospital’s Urgent Care provides quick treatment for
                       non-life-threatening conditions that need immediate
-                      attention, like minor injuries.
+                      attention.
                     </p>
                   </div>
                            
@@ -141,22 +141,49 @@ function Header() {
                 </p>
               </Link>
               <div class="content1">
-                <div className="p-4 w-[600px] h-[auto]">
-                  <h1 className="text-center text-2xl text-black">
+                <div className="2xl:p-12 lg:p-4 md:p-2 2xl:w-[800px] lg:w-[600px] lg:h-[auto] md:w-[360px] md:h-[auto] right-[300px]">
+                  <h1 className="text-center 2xl:text-5xl lg:text-xl md:text-base text-black">
                     Our Camping locations
                   </h1>
-                  <div>
-                    <h1></h1>
-                    <h1></h1>
-                    <h1></h1>
+                  <div className="flex justify-center 2xl:text-2xl lg:text-base md:text-xs text-gray-700">
+                    <span className="flex">
+                    <p>Lahore</p>
+                    <p>Islamabad</p>
+                    <p>Karachi</p>
+                    </span>
                   </div>
-                       
-                  <div>
-                    <h1></h1>
-                    <h1></h1>
-                    <h1></h1>
+                  <div className="flex justify-center 2xl:text-2xl lg:text-base md:text-xs text-gray-700">
+                    <span className="flex">
+                    <p>Multan</p>
+                    <p>Faisalabad</p>
+                    <p>Sialkot</p>
+                    <p>Mansehra</p>
+                    </span>
                   </div>
-                      
+                  <div className="flex justify-center 2xl:text-2xl lg:text-base md:text-xs text-gray-700">
+                  <span className="flex">
+                    <p>Gujranwala</p>
+                    <p>Hydrabad</p>
+                    <p>Larkana</p>
+                    <p>Abbotabad</p>
+                    </span>
+                  </div>
+                  <div className="flex justify-center 2xl:text-2xl lg:text-base md:text-xs text-gray-700">
+                  <span className="flex">
+                    <p>Rawalpindi</p>
+                    <p>Sargodha</p>
+                    <p>Kasur</p>
+                    <p>Chiniot</p>
+                    </span>
+                  </div>
+                  <div className="flex justify-center 2xl:text-2xl lg:text-base md:text-xs text-gray-700">
+                  <span className="flex">
+                    <p>Nawabshah</p>
+                    <p>Burewala</p>
+                    <p>Chakwal</p>
+                    <p>Rahim yar khan</p>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -168,32 +195,32 @@ function Header() {
                 </p>
               </Link>
               <div class="content2">
-                <div className="p-4 w-[600px] h-[auto]">
-                  <h1 className="text-center text-2xl text-black">
+                <div className="2xl:p-12 lg:p-4 md:p-2 2xl:w-[800px] lg:w-[600px] lg:h-[auto] md:w-[400px] md:h-[auto]">
+                  <h1 className="text-center 2xl:text-5xl lg:text-xl md:text-base text-black">
                     Insurances
                   </h1>
                   <div className="">
-                    <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">
+                    <p className="text-center 2xl:text-5xl lg:text-xl md:text-base cursor-pointer text-black hover:text-teal-900">
                     Accepted Insurance Plans
                     </p>
-                    <p className="text-base text-gray-700">
+                    <p className="2xl:text-2xl lg:text-base md:text-xs text-gray-700">
                       We partner with a wide range of insurance providers to make healthcare accessible and affordable for everyone.
                     </p>
                   </div>
                   <div>
-                    <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">
+                    <p className="text-center 2xl:text-5xl lg:text-xl md:text-base cursor-pointer text-black hover:text-teal-900">
                       {" "}
                       Billing and Claims Support
                     </p>
-                    <p className="text-base text-gray-700">
+                    <p className="2xl:text-2xl lg:text-base md:text-xs text-gray-700">
                       We simplify the billing process and assist with insurance claims for seamless payment solutions.
                     </p>
                   </div>
                   <div>
-                    <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">
+                    <p className="text-center 2xl:text-5xl lg:text-xl md:text-base cursor-pointer text-black hover:text-teal-900">
                      Pre-Authorization Assistance
                     </p>
-                    <p className="text-base text-gray-700">
+                    <p className="2xl:text-2xl lg:text-base md:text-xs text-gray-700">
                     We manage pre-approval processes required by insurance for specific treatments or procedures.
                     </p>
                   </div>
@@ -209,15 +236,15 @@ function Header() {
                 </p>
               </Link>
               <div class="content3">
-                <div className="p-4 w-[600px] h-[auto]">
-                  <h1 className="text-center text-2xl text-black">
+                <div className="2xl:p-12 lg:p-4 md:p-2 2xl:w-[800px] lg:w-[600px] lg:h-[auto] md:w-[400px] md:h-[auto]">
+                  <h1 className="text-center 2xl:text-5xl lg:text-xl md:text-base text-black">
                     General & Family Services
                   </h1>
                   <div className="">
-                    <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">
+                    <p className="text-center 2xl:text-5xl lg:text-xl md:text-base cursor-pointer text-black hover:text-teal-900">
                       Primary Care{" "}
                     </p>
-                    <p className="text-base text-gray-700">
+                    <p className="2xl:text-2xl lg:text-base md:text-xs text-gray-700">
                       Routine check-ups and physicals -Chronic disease
                       management (Diabetes, Hypertension, Asthma) - Acute
                       illness care (Cold, Flu, Infections) - Vaccinations and
@@ -225,21 +252,21 @@ function Header() {
                     </p>
                   </div>
                   <div>
-                    <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">
+                    <p className="text-center 2xl:text-5xl lg:text-xl md:text-base cursor-pointer text-black hover:text-teal-900">
                       {" "}
                       Family Medicine{" "}
                     </p>
-                    <p className="text-base text-gray-700">
+                    <p className="2xl:text-2xl lg:text-base md:text-xs text-gray-700">
                       Comprehensive care for all ages - Preventive care and
                       health screenings - Chronic disease management - Mental
                       health services
                     </p>
                   </div>
                   <div>
-                    <p className="text-center text-xl cursor-pointer text-black hover:text-teal-900">
+                    <p className="text-center 2xl:text-5xl lg:text-xl md:text-base cursor-pointer text-black hover:text-teal-900">
                       Urgent Care
                     </p>
-                    <p className="text-base text-gray-700">
+                    <p className="2xl:text-2xl lg:text-base md:text-xs text-gray-700">
                       Walk-in care for acute illnesses and injuries - Evening
                       and weekend hours - On-site lab and imaging services
                     </p>

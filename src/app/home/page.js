@@ -503,7 +503,7 @@ function Home() {
       {/* Dental Care for Every Wallet */}
       <div className="p-10">
         <span className="text-center space-y-3">
-          <p className="2xl:text-3xl md:text-lg font-bold text-teal-950">
+          <p className="2xl:text-5xl md:text-lg font-bold text-teal-950">
             Health Care for Every Wallet
           </p>
           <p className="2xl:text-6xl md:text-4xl cursor-pointer hover:underline text-gray-800">
@@ -519,17 +519,17 @@ function Home() {
       {/* card 1 */}
       <div className="">
       <div className="flex sm:flex-col xl:flex-row xl:justify-between items-center align-middle xl:space-x-10 sm:space-y-6">
-        <div className="flex flex-col justify-between p-4 lg:w-auto xl:w-[400px] xl:h-[300px] border-l-8 rounded-l-xl border-teal-500 text-gray-800 bg-orange-200">
+        <div className="flex flex-col justify-between p-4 lg:w-auto 2xl:w-[700px] 2xl:h-[400px]  xl:w-[400px] xl:h-[300px] border-l-8 rounded-l-xl border-teal-500 text-gray-800 bg-orange-200">
           <h1 className="text-3xl font-bold cursor-pointer hover:underline text-gray-800 hover:text-teal-800">
             Most Insurances Accepted
           </h1>
-          <p className="w-[350px] hover:font-semibold">
+          <p className="md:text-base 2xl:text-2xl md:w-[350px] 2xl:w-[700px] hover:font-semibold">
             We value your investment in your health and wellness. Our hospital
             gladly works with most insurances, making your healthcare journey
             smooth and stress-free.
           </p>
           <span className="flex space-x-3 cursor-pointer hover:font-extrabold hover:underline">
-            <p>Verify your Coverage</p>
+            <p className="2xl:text-2xl">Verify your Coverage</p>
             <Image
               className="lg:w-25 lg:h-15"
               src={"/image/arr.svg"}
@@ -541,18 +541,18 @@ function Home() {
         </div>
 
         {/* card 2 */}
-        <div className="flex flex-col justify-between p-4 lg:w-auto xl:w-[400px] xl:h-[300px] border-l-8 rounded-l-xl border-pink-800 text-gray-800 bg-orange-200">
+        <div className="flex flex-col justify-between p-4 lg:w-auto 2xl:w-[700px] 2xl:h-[400px] xl:w-[400px] xl:h-[300px] border-l-8 rounded-l-xl border-pink-800 text-gray-800 bg-orange-200">
           <h1 className="text-3xl font-bold cursor-pointer hover:underline text-gray-800 hover:text-teal-800">
             Health Care Membership
           </h1>
-          <p className="w-[350px] hover:font-semibold">
+          <p className="md:text-base 2xl:text-2xl md:w-[350px] 2xl:w-[600px] hover:font-semibold">
             Elevate your healthcare experience with our Healthcare Membership.
             Unlock exclusive discounts while prioritizing your wellness.Enjoy
             peace of mind knowing you're taking care of your health, while also
             taking care of your budget
           </p>
           <span className="flex space-x-3 cursor-pointer hover:font-extrabold hover:underline">
-            <p>Sign up for Membership</p>
+            <p className="2xl:text-2xl">Sign up for Membership</p>
             <Image
               className="lg:w-25 lg:h-15"
               src={"/image/arr.svg"}
@@ -564,17 +564,17 @@ function Home() {
         </div>
 
         {/* card 3 */}
-        <div className="flex flex-col justify-between p-4 lg:w-auto xl:w-[400px] xl:h-[300px] border-l-8 rounded-l-xl border-green-800 text-gray-800 bg-orange-200">
+        <div className="flex flex-col justify-between p-4 lg:w-auto 2xl:w-[700px] 2xl:h-[400px] xl:w-[400px] xl:h-[300px] border-l-8 rounded-l-xl border-green-800 text-gray-800 bg-orange-200">
           <h1 className="text-3xl font-bold  cursor-pointer hover:underline text-gray-800 hover:text-teal-800">
             Affordable Care Financing
           </h1>
-          <p className="w-[350px] hover:font-semibold">
+          <p className="md:text-base 2xl:text-2xl md:w-[350px] 2xl:w-[600px] hover:font-semibold">
             Make your health a priority without worrying about the cost. We
             offer financing options through Affirm and CareCredit, allowing you
             to pay for medical treatments in convenient installments.
           </p>
           <span className="flex space-x-3 cursor-pointer hover:font-extrabold hover:underline">
-            <p>Learn About Financing Options</p>
+            <p className="2xl:text-2xl">Learn About Financing Options</p>
             <Image
               className="lg:w-25 lg:h-15"
               src={"/image/arr.svg"}
@@ -587,13 +587,13 @@ function Home() {
       </div>
       </div>
       <div className="flex justify-center space-x-6 lg:p-6">
-        <Link href="explore"><button className="2xl:py-8 xl:py-5 md:py-3 xl:w-64 2xl:w-72 md:w-40 text-center 2xl:text-lg xl:text-sm md:text-xs rounded-bl-lg rounded-tr-lg font-semibold hover:translate-x-3 bg-teal-600 text-white hover:bg-black">
+        <Link href="explore"><button className="2xl:py-8 xl:py-5 md:py-3 xl:w-64 2xl:w-72 md:w-40 text-center 2xl:text-xl xl:text-sm md:text-xs rounded-bl-lg rounded-tr-lg font-semibold hover:translate-x-3 bg-teal-600 text-white hover:bg-black">
           Explore All Health Hub Services
         </button></Link>
         <span className="flex justify-center space-x-3 align-middle items-center cursor-pointer font-serif hover:font-extrabold hover:underline text-gray-800">
-          <Link href="events"><p>News and Events</p></Link>
+          <Link href="events"><p className="md:text-base 2xl:text-3xl">News and Events</p></Link>
           <Image
-            className="lg:w-25 lg:h-15"
+            className="lg:w-25 lg:h-15 2xl:w-24"
             src={"/image/arr.svg"}
             width={20}
             height={15}

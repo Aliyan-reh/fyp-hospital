@@ -136,7 +136,7 @@ export default function About() {
 
       {/* Online Interraction */}
       <div className="p-6">
-        <div className="xl:py-8 2xl:py-16 flex justify-center gap-28 border-8 border-teal-700 bg-orange-200">
+        <div className="md:py-4 xl:py-8 2xl:py-16 flex justify-center md:gap-20 lg:gap-28 border-8 border-teal-700 bg-orange-200">
           <div>
             <span className="flex space-x-2 font-bold py-3 cursor-pointer hover:underline">
               <p className="font-bold 2xl:text-6xl xl:text-4xl md:text-3xl text-gray-800">
