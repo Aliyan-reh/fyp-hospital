@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 function Header() {
   const pathname = usePathname();
   return (
-    <header className="font-serif md:h-40 2xl:h-72 w-100%">
+    <header className="font-serif md:h-40 2xl:h-72 w-%">
       <div className="flex justify-between items-center xl:px-20 md:px-10 h-1/3 w-full bg-teal-500">
         <div className="flex items-center gap-1 align-middle">
           <Image
@@ -86,7 +86,7 @@ function Header() {
         </div>
         <div className="flex items-center h-full md:w-full lg:w-[65%] 2xl:w-[60%]">
           <div className="2xl:w-72 xl:w-64 md:w-24 lg:w-60 h-full"></div>
-          <div className="flex items-center 2xl:space-x-20 xl:space-x-12 lg:space-x-5 md:space-x-3 2xl:text-4xl xl:text-base lg:text-sm md:text-[8px] font-semibold">
+          <div className="flex items-center 2xl:space-x-6 xl:space-x-6 lg:space-x-5 md:space-x-3 2xl:text-4xl xl:text-base lg:text-sm md:text-[8px] font-semibold">
             <div className="dropdown">
               <Link href="/home">
                 <p className=" rounded-md font-extrabold underline text-black hover:text-teal-900">

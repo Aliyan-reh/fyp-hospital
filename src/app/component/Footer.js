@@ -13,7 +13,7 @@ function Footer() {
             height={40}
             alt="apex"
           ></Image>
-          <p className="my-5 h-auto md:w-[310px] 2xl:w-[520px] 2xl:text-2xl lg:text-xs font-normal text-justify text-[#D9DBE1]">
+          <p className="my-5 h-auto w-[310px] 2xl:text-lg lg:text-xs font-normal text-justify text-[#D9DBE1]">
             Hospitals are institutions that deal with health care activities.
             They offer treatment to patients with specialized staff and
             equipment. In other words, hospitals serve humanity and play a vital
@@ -173,12 +173,12 @@ function Footer() {
       </main>
       
       <div className="flex justify-between md:px-4 md:py-2 px-8 py-4 lg:text-sm md:text-[12px] align-middle items-center">
-        <div className="font-normal md:text-lg 2xl:text-2xl text-[#D9DBE1]">
+        <div className="text-[#D9DBE1] font-normal">
           © 2024 Health Hub. All Rights Reserved.
         </div>
         <div className="flex space-x-10 lg:text-sm">
-          <p className="md:text-lg 2xl:text-2xl">Term of Service</p>
-          <p className="md:text-lg 2xl:text-2xl">Privacy policy</p>
+          <p>Term of Service</p>
+          <p>Privacy policy</p>
         </div>
       </div>
     </footer>

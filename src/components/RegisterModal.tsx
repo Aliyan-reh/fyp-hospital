@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Dialog } from '@headlessui/react';
-import apiClient from '../axios/apiClient'; // Import your Axios instance
+import apiClient from '../axios/apiClient';
 import { toast } from 'react-toastify';
 
 interface FormData {
@@ -17,18 +17,11 @@ interface FormErrors {
   password?: string;
 }
 
-const RegisterModal = () => {
-  const [formData, setFormData] = useState<FormData>({
-    username: '',
-    email: '',
-    password: '',
-  });
-
+const RegisterModal = ({ handleLoginRedirect }: { handleLoginRedirect: () => void }) => {
+  const [formData, setFormData] = useState<FormData>({ username: '', email: '', password: '' });
   const [errors, setErrors] = useState<FormErrors>({});
   const [loading, setLoading] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // Modal visibility state
 
-  // Validate form fields
   const validateField = (name: keyof FormData, value: string): string => {
     let error = '';
 
@@ -45,7 +38,6 @@ const RegisterModal = () => {
     return error;
   };
 
-  // Validate all fields
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
     for (const [key, value] of Object.entries(formData)) {
@@ -58,166 +50,95 @@ const RegisterModal = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle input changes
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
 
-    // Validate individual field on change
     const fieldError = validateField(name as keyof FormData, value);
-    setErrors({ ...errors, [name]: fieldError });
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: fieldError }));
   };
 
-  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Validate form before submission
-    if (!validateForm()) {
-      toast.error('Please fix the errors in the form.');
-      return;
-    }
+    if (!validateForm()) return;
 
     setLoading(true);
     try {
       const response = await apiClient.post('/api/auth/register', formData);
-      toast.success('Registration successful!');
-      console.log('API Response:', response.data);
-
-      // Reset the form
-      setFormData({ username: '', email: '', password: '' });
-      setErrors({});
-      setIsOpen(false); // Close modal after success
+      toast.success('Registration successful! Redirecting to login page...');
+      
+      // Redirect to the login page
+      handleLoginRedirect();
     } catch (error: any) {
-      if (error.response) {
-        // Display error message from the API
-        toast.error(error.response.data.error || 'An error occurred.');
-      } else if (error.request) {
-        // No response from server
-        toast.error('No response from server. Please try again later.');
-      } else {
-        // Request setup error
-        toast.error('An unexpected error occurred.');
-      }
+      const errorMessage = error.response?.data?.message || 'Registration failed. Please try again.';
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div>
-      {/* Button to open the modal */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-      >
-        Open Registration Modal
-      </button>
-
-      {/* Modal Component */}
-      <Dialog
-        open={isOpen}
-        onClose={() => setIsOpen(false)}
-        className="relative z-10"
-      >
-        <div className="fixed inset-0 bg-black bg-opacity-25" />
-
-        <div className="fixed inset-0 flex items-center justify-center p-4">
-          <Dialog.Panel className="bg-white rounded-lg p-6 max-w-md w-full">
-            <Dialog.Title className="text-lg font-bold text-gray-800">
-              Register
-            </Dialog.Title>
-
-            {/* Registration Form */}
-            <form onSubmit={handleSubmit} className="mt-4 space-y-4">
-              <div>
-                <label
-                  htmlFor="username"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Username
-                </label>
-                <input
-                  type="text"
-                  id="username"
-                  name="username"
-                  value={formData.username}
-                  onChange={handleInputChange}
-                  className={`mt-1 block w-full rounded-md border ${
-                    errors.username ? 'border-red-500' : 'border-gray-300'
-                  } shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm`}
-                  required
-                />
-                {errors.username && (
-                  <p className="mt-1 text-sm text-red-500">{errors.username}</p>
-                )}
-              </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className={`mt-1 block w-full rounded-md border ${
-                    errors.email ? 'border-red-500' : 'border-gray-300'
-                  } shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm`}
-                  required
-                />
-                {errors.email && (
-                  <p className="mt-1 text-sm text-red-500">{errors.email}</p>
-                )}
-              </div>
-              <div>
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Password
-                </label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleInputChange}
-                  className={`mt-1 block w-full rounded-md border ${
-                    errors.password ? 'border-red-500' : 'border-gray-300'
-                  } shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm`}
-                  required
-                />
-                {errors.password && (
-                  <p className="mt-1 text-sm text-red-500">{errors.password}</p>
-                )}
-              </div>
-
-              <div className="flex justify-end space-x-2">
-                <button
-                  type="button"
-                  onClick={() => setIsOpen(false)}
-                  className="px-4 py-2 text-sm text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="px-4 py-2 text-sm text-white bg-blue-500 rounded-md hover:bg-blue-600"
-                >
-                  {loading ? 'Submitting...' : 'Register'}
-                </button>
-              </div>
-            </form>
-          </Dialog.Panel>
+    <Dialog open={true} onClose={() => {}}>
+      <div className="fixed inset-0 flex items-center justify-center z-10">
+        <div className="bg-white p-6 rounded shadow-lg max-w-sm w-full">
+          <h3 className="text-xl font-semibold mb-4">Create an Account</h3>
+          <form onSubmit={handleSubmit} noValidate>
+            <div className="mb-4">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                value={formData.username}
+                onChange={handleInputChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500"
+              />
+              {errors.username && <p className="text-red-500 text-sm">{errors.username}</p>}
+            </div>
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500"
+              />
+              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+            </div>
+            <div className="mb-4">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500"
+              />
+              {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
+            </div>
+            <div className="flex justify-end space-x-2">
+              <button
+                type="button"
+                onClick={handleLoginRedirect}
+                className="text-gray-600 hover:text-gray-800"
+              >
+                Back to Login
+              </button>
+              <button
+                type="submit"
+                disabled={loading}
+                className="bg-blue-600 text-white px-4 py-2 rounded-md"
+              >
+                {loading ? 'Signing up...' : 'Sign Up'}
+              </button>
+            </div>
+          </form>
         </div>
-      </Dialog>
-    </div>
+      </div>
+    </Dialog>
   );
 };
 

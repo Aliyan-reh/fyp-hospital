@@ -2,7 +2,8 @@ import axios from 'axios';
 
 // Create Axios instance
 const apiClient = axios.create({
-  baseURL: 'https://fyp-backend-n76b.onrender.com/api', // Replace with your API base URL
+  // baseURL: 'https://fyp-backend-n76b.onrender.com/api', 
+  baseURL: 'http://localhost:5000', 
   timeout: 5000, // Optional: timeout in ms
 });
 
