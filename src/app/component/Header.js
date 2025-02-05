@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 function Header() {
   const pathname = usePathname();
   return (
-    <header className="font-serif md:h-40 2xl:h-72 w-100%">
+    <header className="font-serif md:h-40 2xl:h-72 w-%">
       <div className="flex justify-between items-center xl:px-20 md:px-10 h-1/3 w-full bg-teal-500">
         <div className="flex items-center gap-1 align-middle">
           <Image
@@ -129,8 +129,7 @@ function Header() {
                       attention.
                     </p>
                   </div>
-                           
-                </div>
+               </div>
               </div>
             </div>
 

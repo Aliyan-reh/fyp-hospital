@@ -4,27 +4,41 @@ import Link from "next/link";
 import React from "react";
 import {useState} from 'react'
 import LoginModal from "../../components/LoginModal";
+import RegisterModal from "../../components/RegisterModal";
 function Home() {
-  const [open, setOpen] = useState(true)
+  const [openLoginModal, setOpenLoginModal] = useState(true);
+  const [openRegisterModal, setOpenRegisterModal] = useState(false); 
+
   const handleCheckUser = () => {
     const user = localStorage.getItem('user');
-
     if (user) {
-      // toast.success('User is logged in.');
-      console.log('User data:', JSON.parse(user));
+      console.log(user);
     } else {
-      setOpen(true)
-      // toast.error('No user is logged in.');
+      setOpenLoginModal(true);
     }
   };
 
-  const handleCloseModal = () => {
-    setOpen(false); // Close the modal
+  const handleCloseLoginModal = () => {
+    setOpenLoginModal(false); // Close login modal
   };
+  const handleCloseRegisterModal = () => {
+    setOpenRegisterModal(false); // Close register modal
+  };
+
+  const handleRegisterRedirect = () => {
+    setOpenLoginModal(false); // Close login modal
+    setOpenRegisterModal(true); // Open register modal
+  };
+  const handleLoginRedirect = () => {
+    setOpenLoginModal(true); // Open login modal
+    setOpenRegisterModal(false); // Close register modal
+  };
+
+
   return (
     <main className="font-serif py-4 px-10 space-y-5 bg-white">
       {/* first part */}
-      <div className="flex justify-between 2xl:p-14 md:p-5 lg:p-10 rounded-md bg-orange-200">
+      <div className="flex justify-between md:p-5 lg:p-10 rounded-md bg-orange-200">
         <div className="flex flex-col 2xl:space-y-7">
           <div id="first" className="font-bold 2xl:text-[85px] xl:text-6xl xl:text-start md:text-3xl 2xl:space-y-8 md:space-y-4">
             <p>
@@ -46,7 +60,7 @@ function Home() {
           </div>
 
           <div className="py-4 text-justify">
-            <p className="2xl:text-4xl xl:text-base lg:text-xs md:text-[12px] xl:text-start 2xl:w-[1100px] lg:w-[500px] md:w-[250px] font-normal font-sans hover:font-bold 2xl:space-y-10 md:space-y-2 text-gray-800">
+            <p className="2xl:text-3xl xl:text-base lg:text-xs md:text-[10px] xl:text-start 2xl:w-[660px] lg:w-[500px] md:w-[200px] font-normal font-sans hover:font-bold 2xl:space-y-10 md:space-y-2 text-gray-800">
               At Health Hub, we offer a comprehensive range of medical services,
               including emergency care, surgery, rehabilitation, and preventive
               care. Equipped with advanced technology and state-of-the-art
@@ -57,7 +71,7 @@ function Home() {
 
           <div className="2xl:space-y-8">
           <Link href="aboutus"><div className=" flex xl:justify-start">
-             <button className="2xl:py-8 xl:py-4 lg:py-2 md:py-1 md:px-1 lg:px-2 2xl:w-72 lg:w-48 md:w-40 text-center 2xl:text-2xl md:text-sm rounded-bl-lg rounded-tr-lg font-semibold hover:translate-y-3  text-white bg-teal-700 hover:bg-black hover:text-white">
+             <button className="2xl:py-8 xl:py-4 lg:py-2 md:py-1 2xl:w-72 lg:w-48 md:w-40 text-center 2xl:text-2xl md:text-sm rounded-bl-lg rounded-tr-lg font-semibold hover:translate-y-3  text-white bg-teal-700 hover:bg-black hover:text-white">
                 Information About Us
               </button>
             </div></Link>
@@ -106,18 +120,18 @@ function Home() {
       </div>
 
       {/* Treatment Options */}
-      <div className="font-serif border-8 md:px-3 md:py-3 border-orange-200">
+      <div className="font-serif border-8 border-orange-200">
         <div className="flex flex-col lg:px-6 lg:py-10 bg-white">
           <div className="lg:space-y-4">
-            <h1 className="text-center font-bold 2xl:text-6xl lg:text-4xl md:text-2xl text-gray-800">
+            <h1 className="text-center font-bold text-gray-800">
               Treatment Options
             </h1>
-            <h1 className="flex flex-col text-center font-bold 2xl:text-6xl lg:text-4xl md:text-2xl cursor-pointer text-teal-800 hover:text-gray-800">
+            <h1 className="flex flex-col text-center font-bold lg:text-4xl cursor-pointer hover:text-teal-800 text-gray-800">
               <span className="">Health Hub Hospital,</span>
               <span className="">where comfort and care come first</span>
             </h1>
-            <div className="flex text-center items-center justify-center">
-              <p className="lg:w-[430px] 2xl:w-[800px] 2xl:text-3xl lg:text-xs md:text-[12px] text-gray-800">
+            <div className="flex text-center items-center justify-center hover:font-bold">
+              <p className="lg:w-[430px] text-gray-800">
                 Get the smile you've always dreamed of at Health Hub Hospital.
                 Our industry-leading dental treatment options, comprehensive
                 insurance coverage, and flexible financing choices make it
@@ -128,24 +142,24 @@ function Home() {
           </div>
         </div>
         {/* box */}
-        <div className="flex xl:flex-row md:flex-col lg:items-center lg:justify-center xl:justify-between">
+        <div className="flex xl:flex-row lg:flex-col lg:items-center lg:justify-center xl:justify-between">
           {/* box1 */}
           <div className="p-5">
-            <div className="flex flex-col justify-between gap-6 items-center lg:p-4 md:p-2 2xl:border-8 lg:border-4 lg:w-[350px] 2xl:w-[700px] text-gray-800 border-orange-200">
+            <div className="flex flex-col justify-between gap-6 items-center lg:p-4 border-4 lg:w-[350px] text-gray-800 border-orange-200">
               <span className="">
                 <Image
-                  className="lg:w-[170px] lg:h-[170px] 2xl:w-[400px] 2xl:h-[400px]"
+                  className="lg:w-[170px] lg:h-[170px] "
                   src={"/image/image 15.jpg"}
                   width={150}
                   height={150}
                   alt=""
                 ></Image>
-              </span>  
+              </span>
               <span className="font-bold cursor-pointer hover:underline hover:text-teal-800">
-                <h1 className="text-4xl">Child Specialist</h1>
+                <h1>Child Specialist</h1>
               </span>
               <span className="">
-                <p className="text-center lg:text-xs md:text-[12px] 2xl:text-3xl">
+                <p className="">
                   Health Hub Hospital's child specialists are renowned for their
                   expertise and providing exceptional care for your child's
                   unique needs. Our pediatric team is dedicated to delivering
@@ -172,10 +186,10 @@ function Home() {
           </div>
           {/* box 2 */}
           <div className="p-5">
-            <div className="flex flex-col gap-4 items-center lg:p-4 md:p-2 2xl:border-8 lg:border-4 lg:w-[350px] 2xl:w-[700px] text-gray-800 border-orange-200">
+            <div className="flex flex-col gap-4 items-center lg:p-4 border-4 lg:w-[350px] text-gray-800 border-orange-200">
               <span className="">
                 <Image
-                  className="lg:w-[170px] lg:h-[170px] 2xl:w-[400px] 2xl:h-[400px]"
+                  className="lg:w-[170px] lg:h-[170px] "
                   src={"/image/image 18.jpg"}
                   width={150}
                   height={150}
@@ -183,10 +197,10 @@ function Home() {
                 ></Image>
               </span>
               <span className="font-bold cursor-pointer hover:underline hover:text-teal-800">
-                <h1 className="text-4xl"> Dermatologist</h1>
+                <h1>Dermatologist</h1>
               </span>
               <span className="">
-                <p className="text-center lg:text-xs md:text-[12px] 2xl:text-3xl">
+                <p>
                   Dermatologists at our hospital specialize in diagnosing and
                   treating a wide range of skin conditions. They provide expert
                   care for issues such as acne, eczema, psoriasis, and skin
@@ -213,10 +227,10 @@ function Home() {
           </div>
           {/* box 3 */}
           <div className="p-5">
-            <div className="flex flex-col gap-4  items-center lg:p-4 md:p-2 2xl:border-8 lg:border-4 lg:w-[350px] 2xl:w-[700px] text-gray-800 border-orange-200">
+            <div className="flex flex-col gap-4  items-center lg:p-4 border-4 lg:w-[350px] text-gray-800 border-orange-200">
               <span className="">
                 <Image
-                  className="lg:w-[170px] lg:h-[170px] 2xl:w-[400px] 2xl:h-[400px]"
+                  className="lg:w-[170px] lg:h-[170px] "
                   src={"/image/image 17.jpg"}
                   width={150}
                   height={150}
@@ -224,10 +238,10 @@ function Home() {
                 ></Image>
               </span>
               <span className="font-bold cursor-pointer hover:underline hover:text-teal-800">
-                <h1 className="text-4xl">Ophthalmologist</h1>
+                <h1>Ophthalmologist</h1>
               </span>
               <span className="">
-                <p className="text-center lg:text-xs md:text-[12px] 2xl:text-3xl">
+                <p>
                   Our eye specialist provide comprehensive eye care, offering
                   everything from routine eye exams to advanced treatments for
                   complex eye conditions. Trust our experienced ophthalmologists
@@ -254,13 +268,13 @@ function Home() {
           </div>
         </div>
         {/* box part 2 */}
-        <div className="flex xl:flex-row md:flex-col lg:items-center lg:justify-center xl:justify-between">
+        <div className="flex xl:flex-row lg:flex-col lg:items-center lg:justify-center xl:justify-between">
           {/* box 4 */}
           <div className="p-5">
-            <div className="flex flex-col gap-4 items-center lg:p-4 md:p-2 2xl:border-8 lg:border-4 lg:w-[350px] 2xl:w-[700px] text-gray-800 border-orange-200">
+            <div className="flex flex-col gap-4 items-center lg:p-4 border-4 lg:w-[350px] text-gray-800 border-orange-200">
               <span className="">
                 <Image
-                  className="lg:w-[190px] lg:h-[190px] 2xl:w-[400px] 2xl:h-[400px]"
+                  className="lg:w-[190px] lg:h-[190px] "
                   src={"/image/image 21.jpg"}
                   width={150}
                   height={150}
@@ -268,10 +282,10 @@ function Home() {
                 ></Image>
               </span>
               <span className="font-bold cursor-pointer hover:underline hover:text-teal-800">
-                <h1 className="text-4xl">Orthopedic</h1>
+                <h1>Orthopedic</h1>
               </span>
               <span className="">
-                <p className="text-center lg:text-xs md:text-[12px] 2xl:text-3xl">
+                <p>
                   Our orthopedic specialists are committed to providing advanced
                   care for bones, joints, and muscles. Our team aims to restore
                   mobility, alleviate pain, and improve overall quality of life
@@ -297,10 +311,10 @@ function Home() {
           </div>
           {/* box 5 */}
           <div className="p-5">
-            <div className="flex flex-col gap-5 items-center lg:p-4 md:p-2 2xl:border-8 lg:border-4 lg:w-[350px] 2xl:w-[700px] text-gray-800 border-orange-200">
+            <div className="flex flex-col gap-5 items-center lg:p-4 border-4 lg:w-[350px] text-gray-800 border-orange-200">
               <span className="">
                 <Image
-                  className="lg:w-[170px] lg:h-[170px] 2xl:w-[400px] 2xl:h-[400px]"
+                  className="lg:w-[170px] lg:h-[170px] "
                   src={"/image/image 20.jpg"}
                   width={150}
                   height={150}
@@ -308,10 +322,10 @@ function Home() {
                 ></Image>
               </span>
               <span className="font-bold cursor-pointer hover:underline hover:text-teal-800">
-                <h1 className="text-4xl">Physiotherapists</h1>
+                <h1>Physiotherapists</h1>
               </span>
               <span className="">
-                <p className="text-center lg:text-xs md:text-[12px] 2xl:text-3xl">
+                <p>
                   Our physiotherapists are dedicated to improving your mobility
                   and overall physical health through personalized treatment
                   plans. They specialize in rehabilitating injuries, managing
@@ -337,10 +351,10 @@ function Home() {
           </div>
           {/* box 6 */}
           <div className="p-5">
-            <div className="flex flex-col gap-y-4 items-center lg:p-4 md:p-2 2xl:border-8 lg:border-4 lg:w-[350px] 2xl:w-[700px] text-gray-800 border-orange-200">
+            <div className="flex flex-col gap-y-4 items-center lg:p-4 border-4 lg:w-[350px] text-gray-800 border-orange-200">
               <span className="">
                 <Image
-                  className="lg:w-[170px] lg:h-[170px] 2xl:w-[400px] 2xl:h-[400px]"
+                  className="lg:w-[170px] lg:h-[170px] "
                   src={"/image/image 19.jpg"}
                   width={150}
                   height={150}
@@ -348,10 +362,10 @@ function Home() {
                 ></Image>
               </span>
               <span className="font-bold cursor-pointer hover:underline hover:text-teal-800">
-                <h1 className="text-4xl">Neurologist</h1>
+                <h1>Neurologist</h1>
               </span>
               <span className="">
-                <p className="text-center lg:text-xs md:text-[12px] 2xl:text-3xl">
+                <p>
                   Our neurologists offer expert care for a wide range of
                   neurological conditions, including migraines, epilepsy,
                   stroke, Parkinson's disease. They utilize advanced diagnostic
@@ -379,11 +393,11 @@ function Home() {
         </div>
         {/* button */}
         <div className="flex justify-center align-middle items-center space-x-6 lg:p-6">
-         <button className="2xl:py-8 xl:py-5 md:py-3 2xl:w-72 md:w-48 text-center 2xl:text-2xl xl:text-sm md:text-xs rounded-bl-lg rounded-tr-lg font-semibold hover:translate-x-3  bg-teal-600 text-white hover:bg-black">
+         <button className="2xl:py-8 xl:py-5 md:py-3 2xl:w-72 md:w-48 text-center 2xl:text-lg xl:text-sm md:text-xs rounded-bl-lg rounded-tr-lg font-semibold hover:translate-x-3  bg-teal-600 text-white hover:bg-black">
          <Link href="/doctor"><p>Experienced Doctors</p></Link> 
           </button>
           <span className="flex justify-center space-x-3 align-middle items-center cursor-pointer font-serif hover:font-extrabold hover:underline text-gray-800">
-          <Link href="events"><p className="2xl:text-2xl">News and Events</p> </Link>
+          <Link href="events"><p className="">News and Events</p> </Link>
             <Image
               className="lg:w-25 lg:h-15"
               src={"/image/arr.svg"}
@@ -433,11 +447,11 @@ function Home() {
     </div>
 
       {/* patient Care You'll Love  */}
-      <div className="flex justify-center lg:flex-row md:flex-col p-10 rounded-md bg-orange-200">
+      <div className="flex justify-center p-10 rounded-md bg-orange-200">
         {/* first part */}
-        <div className="relative w-fit m-auto ">
+        <div className="relative w-fit m-auto">
           <Image
-            className="md:h-[250px] lg:h-[400px] xl:h-[500px] 2xl:h-[900px]  md:w-[400px] lg:w-[420px] xl:w-[500px]  2xl:w-[800px]"
+            className="md:h-[400px] xl:h-[500px] 2xl:h-[900px] md:w-[420px] xl:w-[500px]  2xl:w-[800px]"
             src={"/image/image 13.jpg"}
             width={420}
             height={550}
@@ -446,25 +460,25 @@ function Home() {
         </div>
 
         {/* Second part */}
-        <div className="flex flex-col text-center lg:p-10 md:p-5 2xl:space-y-7">
-          <p className="2xl:text-2xl lg:text-lg text-center font-bold text-teal-950">
+        <div className="flex flex-col p-10 2xl:space-y-7">
+          <p className="lg:text-lg font-bold text-teal-950">
             Patient Care You'll Love
           </p>
           <div className="font-bold 2xl:text-[85px] xl:text-4xl xl:text-start md:text-3xl 2xl:space-y-8 md:space-y-3">
             <p>
-              <span className="cursor-pointer text-center hover:underline text-gray-800">
+              <span className="cursor-pointer hover:underline text-gray-800">
                 Helping you achieve{" "}
               </span>
             </p>
             <p>
-              <span className="cursor-pointer text-center hover:underline text-teal-800">
+              <span className="cursor-pointer hover:underline text-teal-800">
                 your dream Health{" "}
               </span>
             </p>
           </div>
-<div className="flex justify-center">
-          <div className="flex text-center flex-col lg:gap-y-4 md:gap-y-2 py-4 font-sans">
-            <p className="text-justify 2xl:text-3xl xl:text-base lg:text-sm md:text-[12px] xl:text-start 2xl:w-[850px] lg:w-[450px] md:w-[300px] font-normal 2xl:space-y-10 lg:space-y-2  text-gray-800">
+
+          <div className="flex flex-col gap-y-4 py-4 font-sans">
+            <p className=" text-justify 2xl:text-3xl xl:text-base lg:text-sm md:text-[12px] xl:text-start 2xl:w-[660px] lg:w-[450px] md:w-[200px] font-normal 2xl:space-y-10 md:space-y-2 cursor-pointer hover:font-bold text-gray-800">
               At Health Hub Hospital, we pride ourselves on our patient-centered
               approach to care. Our team of experienced healthcare professionals
               is dedicated to providing personalized attention to each and every
@@ -472,13 +486,13 @@ function Home() {
               concerns, and we strive to address these with empathy and
               understanding.
             </p>
-            <p className="2xl:text-3xl xl:text-base lg:text-sm md:text-[12px] xl:text-start 2xl:w-[850px] lg:w-[450px] md:w-[300px] font-normal 2xl:space-y-10 lg:space-y-2   text-gray-800">
+            <p className="2xl:text-3xl xl:text-base lg:text-sm md:text-[12px] xl:text-start 2xl:w-[660px] lg:w-[450px] md:w-[200px] font-normal 2xl:space-y-10 md:space-y-2 cursor-pointer hover:font-bold text-gray-800">
               What sets us apart from other hospitals is our commitment to
               innovation and excellence. Our medical teams are constantly
               updating their skills and knowledge to stay abreast of the latest
               medical advancements and best practices.
             </p>
-            <p className="2xl:text-3xl xl:text-base lg:text-sm md:text-[12px] xl:text-start 2xl:w-[850px] lg:w-[450px] md:w-[300px] font-normal 2xl:space-y-10 lg:space-y-2   text-gray-800">
+            <p className="2xl:text-3xl xl:text-base lg:text-sm md:text-[12px] xl:text-start 2xl:w-[660px] lg:w-[450px] md:w-[200px] font-normal 2xl:space-y-10 md:space-y-2 cursor-pointer hover:font-bold text-gray-800">
               At Health Hub Hospital, we believe that healthcare should be
               accessible and affordable for all. That's why we offer flexible
               payment options and a range of insurance plans to suit every
@@ -486,10 +500,9 @@ function Home() {
               questions and address your concerns.
             </p>
           </div>
-          </div>
 
           <div className="2xl:space-y-8">
-            <div className=" flex xl:justify-start md:justify-center">
+            <div className=" flex xl:justify-start">
               <Link href="/stories">
                 <button className="2xl:py-8 xl:py-4 lg:py-2 md:py-1 2xl:w-72 lg:w-48 md:w-40 text-center 2xl:text-2xl md:text-sm rounded-bl-lg rounded-tr-lg font-semibold hover:translate-x-10 text-white bg-teal-700 hover:bg-black hover:text-white">
                   Patient Stories
@@ -503,13 +516,13 @@ function Home() {
       {/* Dental Care for Every Wallet */}
       <div className="p-10">
         <span className="text-center space-y-3">
-          <p className="2xl:text-5xl md:text-lg font-bold text-teal-950">
+          <p className="text-lg font-bold text-teal-950">
             Health Care for Every Wallet
           </p>
-          <p className="2xl:text-6xl md:text-4xl cursor-pointer hover:underline text-gray-800">
+          <p className="text-4xl cursor-pointer hover:underline text-gray-800">
             Flexible Payment Options
           </p>
-          <p className="2xl:text-3xl md:text-xl cursor-pointer hover:underline text-gray-800">
+          <p className="text-xl cursor-pointer hover:underline text-gray-800">
             We offer flexible payment options that fit your budget, ensuring you
             receive exceptional care without compromise.
           </p>
@@ -519,17 +532,17 @@ function Home() {
       {/* card 1 */}
       <div className="">
       <div className="flex sm:flex-col xl:flex-row xl:justify-between items-center align-middle xl:space-x-10 sm:space-y-6">
-        <div className="flex flex-col justify-between p-4 lg:w-auto 2xl:w-[700px] 2xl:h-[400px]  xl:w-[400px] xl:h-[300px] border-l-8 rounded-l-xl border-teal-500 text-gray-800 bg-orange-200">
+        <div className="flex flex-col justify-between p-4 lg:w-auto xl:w-[400px] xl:h-[300px] border-l-8 rounded-l-xl border-teal-500 text-gray-800 bg-orange-200">
           <h1 className="text-3xl font-bold cursor-pointer hover:underline text-gray-800 hover:text-teal-800">
             Most Insurances Accepted
           </h1>
-          <p className="md:text-base 2xl:text-2xl md:w-[350px] 2xl:w-[700px] hover:font-semibold">
+          <p className="w-[350px] hover:font-semibold">
             We value your investment in your health and wellness. Our hospital
             gladly works with most insurances, making your healthcare journey
             smooth and stress-free.
           </p>
           <span className="flex space-x-3 cursor-pointer hover:font-extrabold hover:underline">
-            <p className="2xl:text-2xl">Verify your Coverage</p>
+            <p>Verify your Coverage</p>
             <Image
               className="lg:w-25 lg:h-15"
               src={"/image/arr.svg"}
@@ -541,18 +554,18 @@ function Home() {
         </div>
 
         {/* card 2 */}
-        <div className="flex flex-col justify-between p-4 lg:w-auto 2xl:w-[700px] 2xl:h-[400px] xl:w-[400px] xl:h-[300px] border-l-8 rounded-l-xl border-pink-800 text-gray-800 bg-orange-200">
+        <div className="flex flex-col justify-between p-4 lg:w-auto xl:w-[400px] xl:h-[300px] border-l-8 rounded-l-xl border-pink-800 text-gray-800 bg-orange-200">
           <h1 className="text-3xl font-bold cursor-pointer hover:underline text-gray-800 hover:text-teal-800">
             Health Care Membership
           </h1>
-          <p className="md:text-base 2xl:text-2xl md:w-[350px] 2xl:w-[600px] hover:font-semibold">
+          <p className="w-[350px] hover:font-semibold">
             Elevate your healthcare experience with our Healthcare Membership.
             Unlock exclusive discounts while prioritizing your wellness.Enjoy
             peace of mind knowing you're taking care of your health, while also
             taking care of your budget
           </p>
           <span className="flex space-x-3 cursor-pointer hover:font-extrabold hover:underline">
-            <p className="2xl:text-2xl">Sign up for Membership</p>
+            <p>Sign up for Membership</p>
             <Image
               className="lg:w-25 lg:h-15"
               src={"/image/arr.svg"}
@@ -564,17 +577,17 @@ function Home() {
         </div>
 
         {/* card 3 */}
-        <div className="flex flex-col justify-between p-4 lg:w-auto 2xl:w-[700px] 2xl:h-[400px] xl:w-[400px] xl:h-[300px] border-l-8 rounded-l-xl border-green-800 text-gray-800 bg-orange-200">
+        <div className="flex flex-col justify-between p-4 lg:w-auto xl:w-[400px] xl:h-[300px] border-l-8 rounded-l-xl border-green-800 text-gray-800 bg-orange-200">
           <h1 className="text-3xl font-bold  cursor-pointer hover:underline text-gray-800 hover:text-teal-800">
             Affordable Care Financing
           </h1>
-          <p className="md:text-base 2xl:text-2xl md:w-[350px] 2xl:w-[600px] hover:font-semibold">
+          <p className="w-[350px] hover:font-semibold">
             Make your health a priority without worrying about the cost. We
             offer financing options through Affirm and CareCredit, allowing you
             to pay for medical treatments in convenient installments.
           </p>
           <span className="flex space-x-3 cursor-pointer hover:font-extrabold hover:underline">
-            <p className="2xl:text-2xl">Learn About Financing Options</p>
+            <p>Learn About Financing Options</p>
             <Image
               className="lg:w-25 lg:h-15"
               src={"/image/arr.svg"}
@@ -591,9 +604,9 @@ function Home() {
           Explore All Health Hub Services
         </button></Link>
         <span className="flex justify-center space-x-3 align-middle items-center cursor-pointer font-serif hover:font-extrabold hover:underline text-gray-800">
-          <Link href="events"><p className="md:text-base 2xl:text-3xl">News and Events</p></Link>
+          <Link href="events"><p>News and Events</p></Link>
           <Image
-            className="lg:w-25 lg:h-15 2xl:w-24"
+            className="lg:w-25 lg:h-15"
             src={"/image/arr.svg"}
             width={20}
             height={15}
@@ -602,7 +615,24 @@ function Home() {
         </span>
       </div>
 
-      {open && <LoginModal handleCloseModal={handleCloseModal} open={open} />}
+      {/* Login Modal */}
+      {openLoginModal && (
+        <LoginModal 
+          open={openLoginModal} 
+          handleCloseModal={handleCloseLoginModal} 
+          handleRegisterRedirect={handleRegisterRedirect} 
+        />
+      )}
+
+      {/* Register Modal */}
+      {openRegisterModal && (
+        <RegisterModal 
+          open={openRegisterModal} 
+          setOpen={setOpenRegisterModal} 
+          handleLoginRedirect={handleLoginRedirect} 
+        />
+      )}
+      
     </main>
   );
 }
