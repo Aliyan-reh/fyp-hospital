@@ -21,7 +21,7 @@ export default function About() {
           <span className="text-gray-800">Health</span>
           <span className="text-teal-800"> Hub</span>
         </p>
-        <p className="font-normal 2xl:text-3xl xl:text-base lg:text-xs md:text-[7px] text-center hover:font-bold text-[#605D64]">
+        <p className="font-normal 2xl:text-3xl xl:text-base lg:text-xs md:text-[7px] text-center text-[#605D64]">
           Health Hub Hospital offers exceptional patient care and outcomes
           through cutting-edge technology and a team of skilled and
           compassionate professionals. Our warm and welcoming environment
@@ -62,15 +62,6 @@ export default function About() {
                 accessible care, combining cutting-edge technology with a human
                 touch.
               </p>
-              {/* <p className="py-3 font-normal 2xl:text-3xl xl:text-base lg:text-[10px] md:text-[8px] h-auto 2xl:w-[900px] xl:w-[700px] lg:w-[500px] md:w-[350px] hover:font-bold text-[#605D64]">
-                With a legacy of excellence and a passion for making a positive
-                impact, we strive to create a supportive and inclusive
-                environment that fosters trust, understanding, and hope. Our
-                commitment to empathy, kindness, and respect ensures that every
-                patient feels valued and cared for, and our team of experts
-                works together to ensure that every individual receives the care
-                they deserve.
-              </p> */}
               <p className="py-3 font-normal 2xl:text-3xl xl:text-base lg:text-[10px] md:text-[8px] h-auto 2xl:w-[900px] xl:w-[700px] lg:w-[500px] md:w-[350px] text-[#605D64]">
                 Through our unwavering dedication to our patients and
                 communities, we aim to shape the future of healthcare and create
@@ -147,25 +138,25 @@ export default function About() {
               </p>
             </span>
             <div>
-            <p className="py-3 font-normal 2xl:text-3xl xl:text-base lg:text-[10px] md:text-[8px] h-auto 2xl:w-[900px] xl:w-[700px] lg:w-[500px] md:w-[350px] text-[#605D64]">
-              At Healthcare, we understand the importance of compassionate care
-              beyond our hospital walls. That's why we're dedicated to providing
-              exceptional online support to our patients. Through our secure
-              online portal, patients can easily access their medical records,
-              schedule appointments, and communicate with our care team. Our
-              responsive and empathetic staff are always available to address
-              concerns, answer questions.
-            </p>
-            <p className="py-3 font-normal 2xl:text-3xl xl:text-base lg:text-[10px] md:text-[8px] h-auto 2xl:w-[970px] xl:w-[700px] lg:w-[500px] md:w-[350px] text-[#605D64]">
-              Through our mission, we aim to empower individuals to take control
-              of their health and wellbeing, and to provide the necessary
-              support and resources to help them thrive. We believe that
-              everyone deserves access to exceptional healthcare, and we are
-              dedicated to breaking down barriers and pushing boundaries to make
-              that a reality. By combining expertise, compassion, and
-              innovation, we are shaping the future of healthcare and creating a
-              healthier, happier world for generations to come.
-            </p>
+              <p className="py-3 font-normal 2xl:text-3xl xl:text-base lg:text-[10px] md:text-[8px] h-auto 2xl:w-[900px] xl:w-[700px] lg:w-[500px] md:w-[350px] text-[#605D64]">
+                At Healthcare, we understand the importance of compassionate
+                care beyond our hospital walls. That's why we're dedicated to
+                providing exceptional online support to our patients. Through
+                our secure online portal, patients can easily access their
+                medical records, schedule appointments, and communicate with our
+                care team. Our responsive and empathetic staff are always
+                available to address concerns, answer questions.
+              </p>
+              <p className="py-3 font-normal 2xl:text-3xl xl:text-base lg:text-[10px] md:text-[8px] h-auto 2xl:w-[970px] xl:w-[700px] lg:w-[500px] md:w-[350px] text-[#605D64]">
+                Through our mission, we aim to empower individuals to take
+                control of their health and wellbeing, and to provide the
+                necessary support and resources to help them thrive. We believe
+                that everyone deserves access to exceptional healthcare, and we
+                are dedicated to breaking down barriers and pushing boundaries
+                to make that a reality. By combining expertise, compassion, and
+                innovation, we are shaping the future of healthcare and creating
+                a healthier, happier world for generations to come.
+              </p>
             </div>
           </div>
           <div>
@@ -188,50 +179,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      {/* our mission */}
-      {/* <div className="p-6">
-        <div className="flex justify-center xl:py-8 2xl:py-16 gap-28 border-8 border-teal-700 bg-orange-200">
-          <div className="mt-10">
-            <Image
-              className="2xl:h-[550px] xl:w-fit xl:h-[320px] lg:w-[150px] lg:h-[300px] md:w-[120px] rounded-lg"
-              src={"/image/image 14.jpeg"}
-              width={538}
-              height={480}
-              alt="hospital"
-            ></Image>
-          </div>
-
-          <div className="space-y-5">
-            <span className="flex 2xl:text-6xl xl:text-4xl lg:text-3xl md:text-2xl space-x-2 cursor-pointer font-bold hover:underline">
-              <p className="font-bold 2xl:text-6xl xl:text-4xl md:text-3xl text-gray-800">
-                Our
-              </p>
-              <p className="font-bold 2xl:text-6xl xl:text-4xl md:text-3xl text-teal-800">
-                Missions
-              </p>
-            </span>
-            <p className="font-normal 2xl:text-3xl xl:text-base lg:text-[10px] md:text-[8px] h-auto 2xl:w-[900px] xl:w-[700px] lg:w-[500px] md:w-[350px] hover:font-bold text-[#605D64]">
-              At Healthcare, our mission is to provide high-quality,
-              patient-centered care that exceeds expectations. We are committed
-              to delivering compassionate, innovative, and accessible healthcare
-              to our communities. Our dedicated team of healthcare professionals
-              works tirelessly to ensure that every patient receives the care
-              they deserve, with dignity and respect.
-            </p>
-            <p className="font-normal 2xl:text-3xl xl:text-base lg:text-[10px] md:text-[8px] h-auto 2xl:w-[900px] xl:w-[700px] lg:w-[500px] md:w-[350px] hover:font-bold text-[#605D64]">
-              Our mission is built on a foundation of empathy, kindness, and a
-              passion for improving lives. We strive to create a supportive and
-              inclusive environment that fosters trust, understanding, and hope.
-              By combining cutting-edge technology with a human touch, we aim to
-              make healthcare more personal, more effective, and more accessible
-              to all. Through our unwavering commitment to excellence, we aim to
-              make a positive impact on the lives of our patients, their
-              families, and our communities.
-            </p>
-          </div>
-        </div>
-      </div> */}
     </main>
   );
 }

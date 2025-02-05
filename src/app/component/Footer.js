@@ -7,12 +7,14 @@ function Footer() {
     <footer className="font-serif xl:px-8 bg-teal-900">
       <main className="lg:flex lg:flex-row md:flex md:flex-col items-center justify-center lg:py-10 md:py-3 lg:gap-x-16 lg:grid-cols-4 xl:gap-48 md:gap-y-10 border-b-2 border-gray-700">
         <div className="">
+          <div className="flex justify-center">
           <Image
-            src={"/image/apex.png"}
-            width={250}
-            height={40}
+            src={"/image/image37.png"}
+            width={200}
+            height={30}
             alt="apex"
           ></Image>
+          </div>
           <p className="my-5 h-auto md:w-[310px] 2xl:w-[520px] 2xl:text-2xl lg:text-xs font-normal text-justify text-[#D9DBE1]">
             Hospitals are institutions that deal with health care activities.
             They offer treatment to patients with specialized staff and

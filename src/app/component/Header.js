@@ -34,7 +34,7 @@ function Header() {
                 alt="phone"
               ></Image>
               </span>
-              <p className="2xl:text-4xl xl:text-base lg:text-sm md:text-[10px] font-semibol ">
+              <p className="2xl:text-4xl lg:text-sm md:text-[10px] font-semibol ">
                 Call us 042 4455 1122
               </p>
             </div>
@@ -48,7 +48,7 @@ function Header() {
                 alt="mail"
               ></Image>
               </span>
-              <p className="2xl:text-4xl xl:text-base lg:text-sm md:text-[10px] font-semibol ">
+              <p className="2xl:text-4xl lg:text-sm md:text-[10px] font-semibol ">
                 Email us:Healthhub@gmail.com
               </p>
             </div>
@@ -62,7 +62,7 @@ function Header() {
                 alt="clock"
               ></Image>
                </span>
-              <p className="2xl:text-4xl xl:text-base lg:text-sm md:text-[10px] font-semibol">
+              <p className="2xl:text-4xl lg:text-sm md:text-[10px] font-semibol">
                 Working hours:24/7 Hours
               </p>
             </div>
@@ -70,7 +70,7 @@ function Header() {
         </div>
       </div>
 
-      <div className="flex justify-between items-center md:px-10 xl:px-20 2xl:px-12 md:h-2/3 2xl:h-[75%] border-b bg-white">
+      <div className="flex justify-between items-center md:px-10 2xl:px-12 md:h-2/3 2xl:h-[75%] border-b bg-white">
         <div className="">
           <div className="flex items-center md:h-5 md:w-48 2xl:h-14 2xl:w-60">
             <Link href="/home">
@@ -85,8 +85,8 @@ function Header() {
           </div>
         </div>
         <div className="flex items-center h-full md:w-full lg:w-[65%] 2xl:w-[60%]">
-          <div className="2xl:w-72 xl:w-64 md:w-24 lg:w-60 h-full"></div>
-          <div className="flex items-center 2xl:space-x-20 xl:space-x-12 lg:space-x-5 md:space-x-3 2xl:text-4xl xl:text-base lg:text-sm md:text-[8px] font-semibold">
+          <div className="2xl:w-72 md:w-24 lg:w-60 h-full"></div>
+          <div className="flex items-center 2xl:space-x-20 lg:space-x-5 md:space-x-3 2xl:text-4xl xl:text-base lg:text-sm md:text-[8px] font-semibold">
             <div className="dropdown">
               <Link href="/home">
                 <p className=" rounded-md font-extrabold underline text-black hover:text-teal-900">
@@ -221,10 +221,10 @@ function Header() {
                      Pre-Authorization Assistance
                     </p>
                     <p className="2xl:text-2xl lg:text-base md:text-xs text-gray-700">
-                    We manage pre-approval processes required by insurance for specific treatments or procedures.
+                    We manage pre-approval processes required by insurance for specific treatments or procedures.
                     </p>
                   </div>
-                           
+              
                 </div>
               </div>
             </div>
@@ -271,13 +271,13 @@ function Header() {
                       and weekend hours - On-site lab and imaging services
                     </p>
                   </div>
-                           
+                
                 </div>
               </div>
             </div>
 
             <Link href="/form">
-              <button className="xl:py-5 lg:py-3 md:py-2 2xl:w-52 xl:w-44 lg:w-52 md:w-28 text-center 2xl:text-2xl xl:text-sm lg:text-sm md:text-[10px] rounded-lg font-semibold  text-white bg-teal-600 hover:bg-black hover:text-white">
+              <button className="2xl:py-5 lg:py-3 md:py-2 2xl:w-52  lg:w-52 md:w-28 text-center 2xl:text-2xl lg:text-sm md:text-[10px] rounded-lg font-semibold  text-white bg-teal-600 hover:bg-black hover:text-white">
                 Book an Appointment
               </button>
             </Link>

@@ -587,7 +587,7 @@ function Home() {
       </div>
       </div>
       <div className="flex justify-center space-x-6 lg:p-6">
-        <Link href="explore"><button className="2xl:py-8 xl:py-5 md:py-3 xl:w-64 2xl:w-72 md:w-40 text-center 2xl:text-xl xl:text-sm md:text-xs rounded-bl-lg rounded-tr-lg font-semibold hover:translate-x-3 bg-teal-600 text-white hover:bg-black">
+        <Link href="aboutus"><button className="2xl:py-8 xl:py-5 md:py-3 xl:w-64 2xl:w-72 md:w-40 text-center 2xl:text-xl xl:text-sm md:text-xs rounded-bl-lg rounded-tr-lg font-semibold hover:translate-x-3 bg-teal-600 text-white hover:bg-black">
           Explore All Health Hub Services
         </button></Link>
         <span className="flex justify-center space-x-3 align-middle items-center cursor-pointer font-serif hover:font-extrabold hover:underline text-gray-800">
